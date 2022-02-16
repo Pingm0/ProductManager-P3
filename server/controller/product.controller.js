@@ -23,5 +23,13 @@ module.exports = {
                 console.log("Something went wrong with adding a new Product")
                 res.status(400).json(err)
             })
+    }),
+    getOneProduct: ((req,res) => {
+        Product.findOne({_id: req.params.id})
+        .then((OneProduct) => {
+            console.log(OneProduct)
+            res.json(OneProduct)
+        })
+        .catch((err) => { console.log(err)})
     })
 }
