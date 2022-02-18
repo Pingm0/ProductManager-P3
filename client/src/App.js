@@ -8,7 +8,7 @@ import {
   Link
 } from "react-router-dom";
 import OneProduct from './components/OneProduct';
-
+import UpdateOneProduct from './components/UpdateOneProduct';
 
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Main/>} />
         <Route path='/products/:id' element={<OneProduct />} />
+        <Route path='/products/edit/:id' element={<UpdateOneProduct />} />
       </Routes>
     </div>
     </BrowserRouter>
